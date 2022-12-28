@@ -1,0 +1,26 @@
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card .images {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.card .images:hover .secondImg {
+  z-index: 2;
+}
+.card .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.card .images .firstImg {
+  z-index: 1;
+}
+
+/*# sourceMappingURL=card.css.map */
