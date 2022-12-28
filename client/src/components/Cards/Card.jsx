@@ -6,7 +6,7 @@ const Card = ({item}) => {
         <Link className='link' to={`/product/${item.id}`}>
         <div className='card'>
         <div className="images">
-
+            {item.isNew && <span>New Collection</span>}
             <img src={item.img} alt="" className='firstImg'/>
             <img src={item.img2} alt="" className='secondImg'/>
         </div>
