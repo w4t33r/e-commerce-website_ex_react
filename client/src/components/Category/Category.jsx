@@ -8,7 +8,7 @@ const Category = () => {
             <div className="col">
                 <div className="row">
                     <img
-                        src="https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        src="https://cdn.pixabay.com/photo/2016/06/29/08/39/wedding-dresses-1486247_960_720.jpg"
                         alt=""
                     />
                     <button>
@@ -19,7 +19,7 @@ const Category = () => {
                 </div>
                 <div className="row">
                     <img
-                        src="https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        src="https://cdn.pixabay.com/photo/2020/02/05/11/06/woman-4820889_960_720.jpg"
                         alt=""
                     />
                     <button>
@@ -32,7 +32,7 @@ const Category = () => {
             <div className="col">
                 <div className="row">
                     <img
-                        src="https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        src="https://cdn.pixabay.com/photo/2016/06/29/08/41/wedding-dresses-1486256_960_720.jpg"
                         alt=""
                     />
                     <button>
@@ -47,7 +47,7 @@ const Category = () => {
                     <div className="col">
                         <div className="row">
                             <img
-                                src="https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                src="https://cdn.pixabay.com/photo/2021/07/14/15/43/woman-6466382_960_720.jpg"
                                 alt=""
                             />
                             <button>
@@ -61,7 +61,7 @@ const Category = () => {
                         <div className="row">
                             {" "}
                             <img
-                                src="https://images.pexels.com/photos/2703202/pexels-photo-2703202.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                                src="https://cdn.pixabay.com/photo/2021/09/15/11/34/woman-6626615_960_720.jpg"
                                 alt=""
                             />
                             <button>
@@ -74,7 +74,7 @@ const Category = () => {
                 </div>
                 <div className="row">
                     <img
-                        src="https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                        src="https://cdn.pixabay.com/photo/2017/03/29/23/38/amethyst-2186842_960_720.jpg"
                         alt=""
                     />
                     <button>
