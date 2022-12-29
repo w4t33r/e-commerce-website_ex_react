@@ -1,12 +1,12 @@
 import React from 'react';
-import './list.scss'
+import './product_list.scss'
 
-const List = () => {
+const Product_List = () => {
     return (
         <div>
-            
+
         </div>
     );
 };
 
-export default List;
+export default Product_List;
