@@ -7,7 +7,7 @@ const Cart = () => {
             id: 1,
             img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
             img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-            title: 'Love',
+            title: 'Weeeding Dress NEw',
             desc: 'Love',
             isNew: true,
             oldPrice: 200,
@@ -28,7 +28,7 @@ const Cart = () => {
         <div className='cart'>
             <h2>Products in your cart</h2>
             {data?.map(item => (
-                <div className='cartItem'> key={item.id}
+                <div className='cartItem' key={item.id}>
                     <img src={item.img} alt=""/>
                     <div className="cartDetails">
                         <h2>{item.title}</h2>
@@ -43,7 +43,7 @@ const Cart = () => {
                 <span>$132</span>
             </div>
             <button>PROCEED TO CHECKOUT</button>
-            <span className='cartReset'></span>
+            <span className='cartReset'> Reset Cart</span>
         </div>
     );
 };
