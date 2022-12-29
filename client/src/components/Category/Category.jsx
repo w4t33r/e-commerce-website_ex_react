@@ -59,7 +59,6 @@ const Category = () => {
                     </div>
                     <div className="col">
                         <div className="row">
-                            {" "}
                             <img
                                 src="https://cdn.pixabay.com/photo/2021/09/15/11/34/woman-6626615_960_720.jpg"
                                 alt=""

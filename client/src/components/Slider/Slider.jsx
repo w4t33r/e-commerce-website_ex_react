@@ -17,9 +17,9 @@ const Slider = () => {
     }
 
     const sliderImg = [
-        "https://images.unsplash.com/photo-1572322633904-ebbd90cb2f9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHdlZGRpbmclMjBkcmVzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        "https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://www.thesun.co.uk/wp-content/uploads/2020/06/NINTCHDBPICT000592589789.jpg?strip=all&quality=100&w=1800&h=1201&crop=1",
+        "https://beautyhack.ru/assets/images/2020/06/aurora-ad8_a87efb692e79826fef0df607e21e99ed.jpg",
+        "https://beautyhack.ru/assets/images/2020/06/0018.jpg",
     ];
 
     return (
