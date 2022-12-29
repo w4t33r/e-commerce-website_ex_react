@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-
+import Cart from '../Cart/Cart'
 
 import './Navbar.scss'
 
@@ -13,6 +13,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 const Navbar = () => {
+    const [openCart, setOpenCart] = useState(false)
     return (
 
         <div className='navbar'>
@@ -56,14 +57,14 @@ const Navbar = () => {
                         <SearchIcon/>
                         <AccountCircleIcon/>
                         <FavoriteBorderIcon/>
-                        <div className="cart__icon">
+                        <div className="cart__icon" onClick={()=> setOpenCart(!openCart)}>
                             <ShoppingCartIcon/>
                             <span>0</span>
                         </div>
                     </div>
                 </div>
-
             </div>
+            {openCart && <Cart/>}
         </div>
     );
 };
