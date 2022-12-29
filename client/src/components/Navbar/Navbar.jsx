@@ -19,11 +19,11 @@ const Navbar = () => {
             <div className="wrapper">
                 <div className="left">
                     <div className="item">
-                        <img src="/img/sv.png" alt="valute" className=""/>
+                        <img src="/img/sv.png" alt="languageIcon" className=""/>
                         <KeyboardArrowDownIcon/>
                     </div>
                     <div className="item">
-                        <span>SV</span>
+                        <span>SEK</span>
                         <KeyboardArrowDownIcon/>
                     </div>
 
