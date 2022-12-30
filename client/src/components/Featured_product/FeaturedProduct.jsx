@@ -1,36 +1,60 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Card from '../Cards/Card'
 import './featured_product.scss'
+import axios from 'axios'
+
 const FeaturedProduct = ({type}) => {
-    const data = [
-        {
-            id: 1,
-            img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
-            img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-            title: 'Love',
-            isNew: true,
-            oldPrice: 200,
-            price: 100,
-        },
-        {
-            id: 2,
-            img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
-            img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-            title: 'Love',
-            isNew: false,
-            oldPrice: 200,
-            price: 100,
-        },
-        {
-            id: 3,
-            img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
-            img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-            title: 'Love',
-            isNew: true,
-            oldPrice: 200,
-            price: 100,
-        },
-    ]
+    // const data = [
+    //     {
+    //         id: 1,
+    //         img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
+    //         img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
+    //         title: 'Love',
+    //         isNew: true,
+    //         oldPrice: 200,
+    //         price: 100,
+    //     },
+    //     {
+    //         id: 2,
+    //         img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
+    //         img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
+    //         title: 'Love',
+    //         isNew: false,
+    //         oldPrice: 200,
+    //         price: 100,
+    //     },
+    //     {
+    //         id: 3,
+    //         img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
+    //         img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
+    //         title: 'Love',
+    //         isNew: true,
+    //         oldPrice: 200,
+    //         price: 100,
+    //     },
+    // ]
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await axios.get(
+                    process.env.REACT_APP_API_URL + "/products?populate=*",
+                    {
+                        headers: {
+                            Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+                        },
+                    }
+                );
+                console.log(res)
+                setData(res.data.data)
+            } catch (err) {
+                console.log(err);
+            }
+        };
+        fetchData()
+    }, []);
     return (
         <div className='featuredProduct'>
             <div className="featured__title">
