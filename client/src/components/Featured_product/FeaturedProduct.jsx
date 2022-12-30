@@ -1,4 +1,3 @@
-
 import Card from '../Cards/Card'
 import './featured_product.scss'
 import useFetch from "../../hooks/useFetch";
@@ -33,7 +32,7 @@ const FeaturedProduct = ({type}) => {
     //         price: 100,
     //     },
     // ]
-const {data,loading,error} = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`)
+    const {data, loading, error} = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`)
     return (
         <div className='featuredProduct'>
             <div className="featured__title">
@@ -46,9 +45,11 @@ const {data,loading,error} = useFetch(`/products?populate=*&[filters][type][$eq]
             </div>
 
             <div className="featured_bottom">
-                {data.map(item => (
-                    <Card item={item} key={item.id}/>
-                ))}
+                {error
+                    ? "Something went wrong"
+                    : loading
+                        ? "loading"
+                        : data?.map((item) => <Card item={item} key={item.id}/>)}
             </div>
         </div>
     );
