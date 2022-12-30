@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+
 import Card from '../Cards/Card'
 import './featured_product.scss'
-import axios from 'axios'
+import useFetch from "../../hooks/useFetch";
 
 const FeaturedProduct = ({type}) => {
     // const data = [
@@ -33,28 +33,7 @@ const FeaturedProduct = ({type}) => {
     //         price: 100,
     //     },
     // ]
-
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await axios.get(
-                    process.env.REACT_APP_API_URL + "/products?populate=*",
-                    {
-                        headers: {
-                            Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
-                        },
-                    }
-                );
-                console.log(res)
-                setData(res.data.data)
-            } catch (err) {
-                console.log(err);
-            }
-        };
-        fetchData()
-    }, []);
+const {data,loading,error} = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`)
     return (
         <div className='featuredProduct'>
             <div className="featured__title">
