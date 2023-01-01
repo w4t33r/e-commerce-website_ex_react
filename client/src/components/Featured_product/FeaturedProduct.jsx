@@ -3,56 +3,27 @@ import './featured_product.scss'
 import useFetch from "../../hooks/useFetch";
 
 const FeaturedProduct = ({type}) => {
-    // const data = [
-    //     {
-    //         id: 1,
-    //         img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
-    //         img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-    //         title: 'Love',
-    //         isNew: true,
-    //         oldPrice: 200,
-    //         price: 100,
-    //     },
-    //     {
-    //         id: 2,
-    //         img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
-    //         img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-    //         title: 'Love',
-    //         isNew: false,
-    //         oldPrice: 200,
-    //         price: 100,
-    //     },
-    //     {
-    //         id: 3,
-    //         img: "https://cdn.pixabay.com/photo/2021/12/21/03/56/street-6884534_960_720.jpg",
-    //         img2: "https://cdn.pixabay.com/photo/2021/12/05/12/29/christmas-tree-6847584_960_720.jpg",
-    //         title: 'Love',
-    //         isNew: true,
-    //         oldPrice: 200,
-    //         price: 100,
-    //     },
-    // ]
     const {data, loading, error} = useFetch(`/products?populate=*&[filters][type][$eq]=${type}`)
     return (
-        <div className='featuredProduct'>
+        <div className="featuredProducts">
             <div className="featured__title">
-                <h2>{type} products</h2>
+                <h1>{type} products</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque blanditiis consequatur
-                    delectus dicta dolorem doloribus laboriosam minus obcaecati placeat, quaerat sint. Aliquam aliquid
-                    eveniet illo laborum minus odit repudiandae.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+                    suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+                    lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
+                    suspendisse ultrices gravida. Risus commodo viverra maecenas.
                 </p>
             </div>
-
             <div className="featured_bottom">
                 {error
-                    ? "Something went wrong"
+                    ? "Something went wrong!"
                     : loading
                         ? "loading"
-                        : data?.map((item) => <Card item={item} key={item.id}/>)}
+                        : data?.map((item) => <Card item={item} key={item.id} />)}
             </div>
         </div>
     );
 };
-
 export default FeaturedProduct;
