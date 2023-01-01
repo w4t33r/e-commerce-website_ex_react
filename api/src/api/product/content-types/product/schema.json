@@ -16,7 +16,7 @@
       "type": "string"
     },
     "desc": {
-      "type": "string"
+      "type": "text"
     },
     "img": {
       "type": "media",
@@ -29,7 +29,7 @@
         "audios"
       ]
     },
-    "secondImage": {
+    "img2": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -43,7 +43,7 @@
     "price": {
       "type": "decimal"
     },
-    "isNewCollection": {
+    "isNew": {
       "type": "boolean",
       "default": false
     },
@@ -63,8 +63,8 @@
       "type": "enumeration",
       "enum": [
         "normal",
-        "trending",
-        "featured"
+        "featured",
+        "trending"
       ]
     }
   }
