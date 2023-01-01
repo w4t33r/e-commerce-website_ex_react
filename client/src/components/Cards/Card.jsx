@@ -7,7 +7,7 @@ const Card = ({item}) => {
         <Link className='link' to={`/product/${item.id}`}>
             <div className='card'>
                 <div className="images">
-                    {item?.attributes.isNewCollection && <span>New Collection</span>}
+                    {item?.attributes.isNew && <span>New Collection</span>}
                     <img src={process.env.REACT_APP_UPLOAD_URL + item.attributes?.img?.data?.attributes?.url} alt=""
                          className='firstImg'/>
                     <img src={process.env.REACT_APP_UPLOAD_URL + item.attributes?.img2?.data?.attributes?.url} alt=""
