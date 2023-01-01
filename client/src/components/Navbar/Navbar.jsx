@@ -10,10 +10,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import {useSelector} from "react-redux";
 
 
 const Navbar = () => {
     const [openCart, setOpenCart] = useState(false)
+    const products = useSelector(state => state.cart.products)
+
     return (
 
         <div className='navbar'>
@@ -29,18 +32,18 @@ const Navbar = () => {
                     </div>
 
                     <div className="item">
-                        <Link className='link' to='/products/1'>Women</Link>
+                        <Link className='link' to='/products/1'>Dress</Link>
                     </div>
                     <div className="item">
-                        <Link className='link' to='/products/2'>Men</Link>
+                        <Link className='link' to='/products/1'>Wedding</Link>
                     </div>
                     <div className="item">
-                        <Link className='link' to='/products/3'>Children</Link>
+                        <Link className='link' to='/products/1'>Accessories</Link>
                     </div>
                 </div>
 
                 <div className="center">
-                    <Link className='link' to='/'>TANYASTORE</Link>
+                    <Link className='link' to='/'>SomeStore</Link>
                 </div>
 
                 <div className="right">
@@ -59,7 +62,7 @@ const Navbar = () => {
                         <FavoriteBorderIcon/>
                         <div className="cart__icon" onClick={()=> setOpenCart(!openCart)}>
                             <ShoppingCartIcon/>
-                            <span>0</span>
+                            <span>{products.length}</span>
                         </div>
                     </div>
                 </div>
