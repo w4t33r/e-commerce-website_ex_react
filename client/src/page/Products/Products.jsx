@@ -12,7 +12,7 @@ const Products = () => {
     const [selectedSubCategory, setSelectedSubCategory] = useState([])
 
     const {data, loading, error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${categoryId}`)
-
+        console.log(data?.attributes)
     const handleChange = (e) => {
         const value = e.target.value
         const isChecked = e.target.checked
@@ -23,7 +23,7 @@ const Products = () => {
                 :selectedSubCategory.filter((item)=> item !== value)
         );
     };
-    console.log(selectedSubCategory)
+    console.log(data)
 
     return (
         <div className='products'>
@@ -41,7 +41,7 @@ const Products = () => {
                     <h2>Sort by price</h2>
                     <div className="inputItem">
                         <span>0</span>
-                        <input type='range' min={0} max={80000} onChange={(e) => setMaxPrice(e.target.value)}/>
+                        <input type='range' min={400} max={80000} onChange={(e) => setMaxPrice(e.target.value)}/>
                         <span>{maxPrice}</span>
                     </div>
                 </div>
