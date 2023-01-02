@@ -22,12 +22,11 @@ const Product = () => {
                 <div className="imageContainer">
                     <div className="mainImg">
                         <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={() => setSelectedImg("img")}/>
-                        <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={() => setSelectedImg("img2")}/>
                     </div>
                 </div>
                 <div className="productInfo">
                     <h2>{data?.attributes?.title}</h2>
-                    <span className='price'>${data?.attributes?.price}</span>
+                    <span className='price'>{data?.attributes?.price} SEK</span>
                     <p>{data?.attributes?.desc}
                     </p>
                     <div className="quantity">

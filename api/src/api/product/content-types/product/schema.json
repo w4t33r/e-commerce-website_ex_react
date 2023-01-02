@@ -64,7 +64,7 @@
       "enum": [
         "normal",
         "featured",
-        "trending"
+        "trend"
       ]
     }
   }
