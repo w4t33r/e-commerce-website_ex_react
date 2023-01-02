@@ -29,7 +29,7 @@ const Cart = () => {
                 </div>
             ))}
             <div className="cartTotal">
-                <span>${totalPrice()}</span>
+                <span>{totalPrice()} SEK</span>
             </div>
             <button>PROCEED TO CHECKOUT</button>
             <span className='cartReset' onClick={() => dispatch(resetCart())}> Reset Cart </span>
