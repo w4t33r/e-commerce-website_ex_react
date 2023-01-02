@@ -12,16 +12,15 @@
       text-transform: capitalize;
     }
 
-    p {
-      flex: 3;
-      color: gray
+    p{
+      flex:3;
+      color:gray
     }
   }
 
-    .featured_bottom {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-    }
-
+  .featured__bottom{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
 }

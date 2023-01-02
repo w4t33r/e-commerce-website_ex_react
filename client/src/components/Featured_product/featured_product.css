@@ -1,21 +1,21 @@
-.featuredProduct {
+.featuredProducts {
   margin: 100px 200px;
 }
-.featuredProduct .featured__title {
+.featuredProducts .featured__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
 }
-.featuredProduct .featured__title h2 {
+.featuredProducts .featured__title h2 {
   flex: 2;
   text-transform: capitalize;
 }
-.featuredProduct .featured__title p {
+.featuredProducts .featured__title p {
   flex: 3;
   color: gray;
 }
-.featuredProduct .featured_bottom {
+.featuredProducts .featured__bottom {
   display: flex;
   justify-content: center;
   gap: 50px;

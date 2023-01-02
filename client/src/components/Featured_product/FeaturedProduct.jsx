@@ -7,7 +7,7 @@ const FeaturedProduct = ({type}) => {
     return (
         <div className="featuredProducts">
             <div className="featured__title">
-                <h1>{type} products</h1>
+                <h2>{type} products</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
@@ -16,7 +16,7 @@ const FeaturedProduct = ({type}) => {
                     suspendisse ultrices gravida. Risus commodo viverra maecenas.
                 </p>
             </div>
-            <div className="featured_bottom">
+            <div className="featured__bottom">
                 {error
                     ? "Something went wrong!"
                     : loading
@@ -26,4 +26,5 @@ const FeaturedProduct = ({type}) => {
         </div>
     );
 };
+
 export default FeaturedProduct;
