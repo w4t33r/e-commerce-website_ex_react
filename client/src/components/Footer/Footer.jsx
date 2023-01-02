@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="bottom">
                 <div className="bottom__left">
                     <span className="logo">
-                        TANYASTORE
+                        SomeStore
                     </span>
                 </div>
                 <div className="bottom__right">
