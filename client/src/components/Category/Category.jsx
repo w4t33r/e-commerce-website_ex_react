@@ -65,7 +65,7 @@ const Category = () => {
                             />
                             <button>
                                 <Link to="/products/1" className="link">
-                                    Accessories
+                                    Evening dresses
                                 </Link>
                             </button>
                         </div>
@@ -78,7 +78,7 @@ const Category = () => {
                     />
                     <button>
                         <Link to="/products/1" className="link">
-                            Evening dresses
+                            Accessories
                         </Link>
                     </button>
                 </div>
