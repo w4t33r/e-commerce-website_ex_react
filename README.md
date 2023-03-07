@@ -1,4 +1,4 @@
-# exam_react
+# e-commerce website
 # react-frontend_kurs_3
 
 project made using, react-router-dom, axios, @mui, strapi, db_mysql, redux 
